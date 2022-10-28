@@ -17,7 +17,8 @@ module Dossier
         password: uri.password,
         host:     uri.host,
         port:     uri.port,
-        database: File.basename(uri.path)
+        database: File.basename(uri.path),
+        reconnect: true
       }.merge(params).reject { |k,v| v.nil? }
     end
 
